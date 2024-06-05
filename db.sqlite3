@@ -1,0 +1,10 @@
+-- Create a new SQLite database and save it as db.sqlite3
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL,
+    password TEXT NOT NULL
+);
+
+-- Insert initial data
+INSERT INTO users (username, password) VALUES ('admin', 'admin');
