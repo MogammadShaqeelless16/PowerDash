@@ -9,7 +9,7 @@ import { Logo } from "./logo";
 
 const { useToken } = theme;
 
-const name = "Globex Corporation";
+const name = "Powerdash";
 
 export const Title: React.FC<RefineLayoutThemedTitleProps> = ({
   collapsed,
