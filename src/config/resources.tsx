@@ -4,10 +4,12 @@ import {
   PieChartOutlined,
   ContainerOutlined,
   CrownOutlined,
+  TrophyOutlined,
   DashboardOutlined,
-  ProjectOutlined,
   BookOutlined,
+  UserOutlined,
   TeamOutlined,
+  DollarOutlined,
 } from "@ant-design/icons";
 
 export const resources: IResourceItem[] = [
@@ -41,7 +43,7 @@ export const resources: IResourceItem[] = [
     meta: {
       label: "Graduate",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
-      icon: <PieChartOutlined  />,
+      icon: <TrophyOutlined  />,
     },
   },
   {
@@ -53,7 +55,7 @@ export const resources: IResourceItem[] = [
     meta: {
       label: "Finance",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
-      icon: <PieChartOutlined  />,
+      icon: <DollarOutlined  />,
     },
   },
   {
@@ -65,7 +67,7 @@ export const resources: IResourceItem[] = [
     meta: {
       label: "Staff",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
-      icon: <PieChartOutlined  />,
+      icon: <TeamOutlined  />,
     },
   },
   {
@@ -77,7 +79,7 @@ export const resources: IResourceItem[] = [
     meta: {
       label: "Universities",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
-      icon: <BookOutlined  />,
+      icon: <BookOutlined   />,
     },
   },
   {
@@ -97,7 +99,7 @@ export const resources: IResourceItem[] = [
     meta: {
       label: "Student",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
-      icon: <TeamOutlined />,
+      icon: <UserOutlined  />,
     },
   },
   {
