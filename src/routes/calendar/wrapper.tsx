@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 
-import { CreateButton } from "@refinedev/antd";
 import { useNavigation } from "@refinedev/core";
-
-import { Col, Row } from "antd";
-
-import { CalendarUpcomingEvents } from "@/components";
-
-import { Calendar, CalendarCategories } from "./components";
 
 export const CalendarPageWrapper: React.FC<React.PropsWithChildren> = ({
   children,
@@ -19,39 +12,15 @@ export const CalendarPageWrapper: React.FC<React.PropsWithChildren> = ({
 
   return (
     <div className="page-container">
-      <Row gutter={[32, 32]}>
-        <Col xs={24} xl={6}>
-          <CreateButton block size="large" style={{ marginBottom: "1rem" }}>
-            Create event
-          </CreateButton>
-
-          <CalendarUpcomingEvents
-            limit={3}
-            cardProps={{ style: { marginBottom: "1rem" } }}
-          />
-
-          <CalendarCategories
-            onChange={(event) => {
-              setSelectedEventCategory((prev) => {
-                if (prev.includes(event.target.value)) {
-                  return prev.filter((item) => item !== event.target.value);
-                }
-
-                return [...prev, event.target.value];
-              });
-            }}
-          />
-        </Col>
-        <Col xs={24} xl={18}>
-          <Calendar
-            onClickEvent={({ id }) => {
-              show("events", id);
-            }}
-            categoryId={selectedEventCategory}
-          />
-        </Col>
-      </Row>
       {children}
+      <iframe
+        title="Enrollment"
+        width="100%"
+        height="541.25"
+        src={`https://app.powerbi.com/reportEmbed?reportId=ec189112-9c0e-47e6-9b0d-34d33a5daae5&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&navContentPaneEnabled=false&showControls=false&filtersPaneEnabled=false`}
+        frameborder="0"
+        allowFullScreen="true"
+      ></iframe>
     </div>
   );
 };
