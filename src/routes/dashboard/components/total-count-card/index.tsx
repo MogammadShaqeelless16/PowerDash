@@ -1,6 +1,6 @@
 import React, { type FC, type PropsWithChildren, Suspense } from "react";
 
-import { AuditOutlined, ShopOutlined, TeamOutlined } from "@ant-design/icons";
+import { AuditOutlined, BookOutlined , TeamOutlined } from "@ant-design/icons";
 import type { AreaConfig } from "@ant-design/plots";
 import { Card, Skeleton } from "antd";
 
@@ -148,7 +148,7 @@ const variants: {
     icon: (
       <IconWrapper color="#E6F4FF">
         {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
-        <ShopOutlined
+        <BookOutlined 
           className="md"
           style={{
             color: "#1677FF",
@@ -156,7 +156,7 @@ const variants: {
         />
       </IconWrapper>
     ),
-    title: "Number of companies",
+    title: "Number of universities",
     data: [
       {
         index: "1",
@@ -194,7 +194,7 @@ const variants: {
         />
       </IconWrapper>
     ),
-    title: "Number of contacts",
+    title: "Number of students",
     data: [
       {
         index: "1",
