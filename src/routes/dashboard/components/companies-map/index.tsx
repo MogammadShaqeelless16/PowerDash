@@ -33,7 +33,7 @@ export const CompaniesMap: React.FC = () => {
           {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
           <GlobalOutlined />
           <Text size="sm" style={{ marginLeft: ".5rem" }}>
-            Companies
+            Universities
           </Text>
         </div>
       }

@@ -42,7 +42,7 @@ export const DashboardDealsChart: React.FC = () => {
           timeUnix: date.unix(),
           timeText: date.format("MMM YYYY"),
           value: item.sum?.value,
-          state: "Won",
+          state: "Income",
         };
       });
 
@@ -55,7 +55,7 @@ export const DashboardDealsChart: React.FC = () => {
           timeUnix: date.unix(),
           timeText: date.format("MMM YYYY"),
           value: item.sum?.value,
-          state: "Lost",
+          state: "Expenditure",
         };
       });
 
@@ -80,7 +80,7 @@ export const DashboardDealsChart: React.FC = () => {
       tickCount: 4,
       label: {
         formatter: (v) => {
-          return `$${Number(v) / 1000}k`;
+          return `R${Number(v) / 1000}k`;
         },
       },
     },
@@ -88,7 +88,7 @@ export const DashboardDealsChart: React.FC = () => {
       formatter: (data) => {
         return {
           name: data.state,
-          value: `$${Number(data.value) / 1000}k`,
+          value: `R${Number(data.value) / 1000}k`,
         };
       },
     },
@@ -98,7 +98,7 @@ export const DashboardDealsChart: React.FC = () => {
       return { fill: datum.state === "Won" ? won : lost };
     },
     color: (datum) => {
-      return datum.state === "Won" ? "#52C41A" : "#F5222D";
+      return datum.state === "Income" ? "#52C41A" : "#F5222D";
     },
   };
 
