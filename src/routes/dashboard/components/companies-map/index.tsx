@@ -43,7 +43,7 @@ export const CompaniesMap: React.FC = () => {
           // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
           icon={<RightCircleOutlined />}
         >
-          See all companies
+          See all universities
         </Button>
       }
     >
