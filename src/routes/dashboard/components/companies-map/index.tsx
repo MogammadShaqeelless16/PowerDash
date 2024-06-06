@@ -55,25 +55,11 @@ export const CompaniesMap: React.FC = () => {
         }}
       >
         <Suspense>
-          <Map />
+        <iframe title="Enrollment" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=ec189112-9c0e-47e6-9b0d-34d33a5daae5&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&pageName=Page1&navContentPaneEnabled=false&filtersPaneEnabled=false&showControls=false&filterPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>
         </Suspense>
       </div>
       <div className={styles.countries}>
-        {Countries.map((country) => {
-          return (
-            <div className={styles.item} key={country.id}>
-              <img
-                className={styles.flag}
-                src={country.flag}
-                alt={`${country.name} flag`}
-                width={14}
-                height={7}
-              />
-              <div>{country.shortName}</div>
-              {country.count}
-            </div>
-          );
-        })}
+      
       </div>
     </Card>
   );
