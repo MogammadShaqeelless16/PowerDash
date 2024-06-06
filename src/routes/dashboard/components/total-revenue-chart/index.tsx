@@ -29,7 +29,7 @@ export const DashboardTotalRevenueChart: React.FC = () => {
       {
         field: "title",
         operator: "nin",
-        value: ["WON", "LOST"],
+        value: ["Income", "Expenditure"],
       },
     ],
     meta: {
@@ -169,7 +169,7 @@ export const DashboardTotalRevenueChart: React.FC = () => {
       >
         <Space direction="vertical" size={0}>
           <Text size="xs" className="secondary">
-            Expected
+            Income
           </Text>
           {!expectedRevenueIsLoading || !realizedRevenueIsLoading ? (
             <Text
@@ -194,7 +194,7 @@ export const DashboardTotalRevenueChart: React.FC = () => {
         </Space>
         <Space direction="vertical" size={0}>
           <Text size="xs" className="secondary">
-            Realized
+            Expenditure
           </Text>
           {!expectedRevenueIsLoading || !realizedRevenueIsLoading ? (
             <Text

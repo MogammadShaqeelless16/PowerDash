@@ -7,9 +7,9 @@ export const currencyNumber = (
     Intl &&
     typeof Intl.NumberFormat === "function"
   ) {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-ZA", {
       style: "currency",
-      currency: "USD",
+      currency: "ZAR",
       ...options,
     }).format(value);
   }
