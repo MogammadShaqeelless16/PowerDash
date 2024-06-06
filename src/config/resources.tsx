@@ -33,6 +33,42 @@ export const resources: IResourceItem[] = [
     },
   },
   {
+    name: "graduate",
+    list: "/calendar",
+    create: "/calendar/create",
+    edit: "/calendar/edit/:id",
+    show: "/calendar/show/:id",
+    meta: {
+      label: "Graduate",
+      // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
+      icon: <PieChartOutlined  />,
+    },
+  },
+  {
+    name: "finance",
+    list: "/calendar",
+    create: "/calendar/create",
+    edit: "/calendar/edit/:id",
+    show: "/calendar/show/:id",
+    meta: {
+      label: "Finance",
+      // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
+      icon: <PieChartOutlined  />,
+    },
+  },
+  {
+    name: "staff",
+    list: "/calendar",
+    create: "/calendar/create",
+    edit: "/calendar/edit/:id",
+    show: "/calendar/show/:id",
+    meta: {
+      label: "Staff",
+      // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
+      icon: <PieChartOutlined  />,
+    },
+  },
+  {
     name: "companies",
     list: "/companies",
     show: "/companies/:id",

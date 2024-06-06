@@ -100,7 +100,7 @@ export const ContactCreatePage: React.FC<PropsWithChildren> = ({
                   replace("company-create?to=/contacts/create");
                 }}
               >
-                Add new company
+                Add new university
               </Button>
             }
           >

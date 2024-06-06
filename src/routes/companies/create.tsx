@@ -99,7 +99,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
           type: "replace",
         });
       }}
-      title="Add new company"
+      title="Add new university"
       width={512}
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
       closeIcon={<LeftOutlined />}
