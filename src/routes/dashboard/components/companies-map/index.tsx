@@ -55,7 +55,7 @@ export const CompaniesMap: React.FC = () => {
         }}
       >
         <Suspense>
-        <iframe title="Enrollment" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=ec189112-9c0e-47e6-9b0d-34d33a5daae5&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&pageName=Page1&navContentPaneEnabled=false&filtersPaneEnabled=false&showControls=false&filterPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="Enrollment" width="100%" height="100%" src="https://app.powerbi.com/reportEmbed?reportId=ec189112-9c0e-47e6-9b0d-34d33a5daae5&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&pageName=Page1&navContentPaneEnabled=false&filtersPaneEnabled=false&showControls=false&filterPaneEnabled=false" frameBorder="0"></iframe>
         </Suspense>
       </div>
       <div className={styles.countries}>
