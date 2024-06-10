@@ -36,10 +36,10 @@ export const resources: IResourceItem[] = [
   },
   {
     name: "graduate",
-    list: "/calendar",
-    create: "/calendar/create",
-    edit: "/calendar/edit/:id",
-    show: "/calendar/show/:id",
+    list: "/graduate",
+    create: "/graduate/create",
+    edit: "/graduate/edit/:id",
+    show: "/graduate/show/:id",
     meta: {
       label: "Graduate",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
@@ -48,10 +48,10 @@ export const resources: IResourceItem[] = [
   },
   {
     name: "finance",
-    list: "/calendar",
-    create: "/calendar/create",
-    edit: "/calendar/edit/:id",
-    show: "/calendar/show/:id",
+    list: "/finance",
+    create: "/finance/create",
+    edit: "/finance/edit/:id",
+    show: "/finance/show/:id",
     meta: {
       label: "Finance",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66
@@ -60,10 +60,10 @@ export const resources: IResourceItem[] = [
   },
   {
     name: "staff",
-    list: "/calendar",
-    create: "/calendar/create",
-    edit: "/calendar/edit/:id",
-    show: "/calendar/show/:id",
+    list: "/staff",
+    create: "/staff/create",
+    edit: "/staff/edit/:id",
+    show: "/staff/show/:id",
     meta: {
       label: "Staff",
       // @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66

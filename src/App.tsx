@@ -25,6 +25,14 @@ import {
   CalendarShowPage,
 } from "./routes/calendar";
 import {
+  StaffPageWrapper,
+  StaffShowPage,
+} from "./routes/staff";
+import {
+  FinancePageWrapper,
+  FinanceShowPage,
+} from "./routes/finance";
+import {
   CompanyCreatePage,
   CompanyEditPage,
   CompanyListPage,
@@ -104,6 +112,30 @@ const App: React.FC = () => {
                     >
                       <Route index element={null} />
                       <Route path="show/:id" element={<CalendarShowPage />} />
+                      <Route path="edit/:id" element={<CalendarEditPage />} />
+                      <Route path="create" element={<CalendarCreatePage />} />
+                    </Route>
+                    <Route
+                      path="/finance"
+                      element={
+                        <FinancePageWrapper>
+                          <Outlet />
+                        </FinancePageWrapper>
+                      }
+                    >
+                      <Route index element={null} />
+                      <Route path="show/:id" element={<FinanceShowPage />} />
+                    </Route>
+                    <Route
+                      path="/staff"
+                      element={
+                        <StaffPageWrapper>
+                          <Outlet />
+                        </StaffPageWrapper>
+                      }
+                    >
+                      <Route index element={null} />
+                      <Route path="show/:id" element={<StaffShowPage />} />
                       <Route path="edit/:id" element={<CalendarEditPage />} />
                       <Route path="create" element={<CalendarCreatePage />} />
                     </Route>
