@@ -153,7 +153,7 @@ export const CompanyCreatePage = ({ isOverModal }: Props) => {
           <Input placeholder="Please enter university name" />
         </Form.Item>
         <Form.Item
-          label="Sales owner"
+          label="Dean"
           name="salesOwnerId"
           rules={[{ required: true }]}
         >

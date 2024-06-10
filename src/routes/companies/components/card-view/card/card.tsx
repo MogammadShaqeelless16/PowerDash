@@ -53,7 +53,7 @@ export const CompanyCard: FC<Props> = ({ company }) => {
               gap: "6px",
             }}
           >
-            <Text size="xs">Related contacts</Text>
+            <Text size="xs">Employees</Text>
             <AvatarGroup
               size={"small"}
               overlap
@@ -69,7 +69,7 @@ export const CompanyCard: FC<Props> = ({ company }) => {
               gap: "6px",
             }}
           >
-            <Text size="xs">Sales owner</Text>
+            <Text size="xs">Dean</Text>
             <Tooltip
               title={company.salesOwner?.name}
               key={company.salesOwner?.id}

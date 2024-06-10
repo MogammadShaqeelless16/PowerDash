@@ -113,7 +113,7 @@ export const QuotesFormModal: FC<Props> = ({
             rules={[{ required: true }]}
             name={["salesOwnerId"]}
             initialValue={formProps?.initialValues?.salesOwner?.id}
-            label="Sales owner"
+            label="Dean"
           >
             <Select
               {...selectPropsSalesOwners}
