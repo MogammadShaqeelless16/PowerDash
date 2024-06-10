@@ -215,7 +215,7 @@ export const ContactShowPage: React.FC = () => {
             extra={
               <Form.Item
                 name="salesOwnerId"
-                label="Sales Owner"
+                label="Dean"
                 labelCol={{
                   style: {
                     marginTop: "0.8rem",
