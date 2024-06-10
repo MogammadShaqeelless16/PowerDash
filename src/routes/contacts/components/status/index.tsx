@@ -84,7 +84,7 @@ const LifecycleStage: React.FC<{ status: ContactStatusType }> = ({
 
   return (
     <Text strong>
-      Lifecycle stage: {icon}
+      Application stage: {icon}
       <Text
         style={{
           marginLeft: ".2rem",
@@ -218,7 +218,7 @@ export const ContactStatus: React.FC<ContactStatusProps> = ({ contact }) => {
               },
               items: [
                 {
-                  label: "Negotiation",
+                  label: "Registration",
                   key: ContactStatusEnum.NEGOTIATION,
                 },
                 {
@@ -254,7 +254,7 @@ export const ContactStatus: React.FC<ContactStatusProps> = ({ contact }) => {
               },
               items: [
                 {
-                  label: "Won",
+                  label: "Accepted",
                   key: ContactStatusEnum.WON,
                 },
                 {

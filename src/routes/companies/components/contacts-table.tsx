@@ -382,7 +382,7 @@ const ContactForm = () => {
                   marginBottom: hasContacts ? 16 : 0,
                 }}
               >
-                Add new contact
+                Add new student
               </Button>
             </div>
           );
@@ -435,11 +435,11 @@ const statusOptions: {
     value: "UNQUALIFIED",
   },
   {
-    label: "Won",
+    label: "Accepted",
     value: "WON",
   },
   {
-    label: "Negotiation",
+    label: "Registration",
     value: "NEGOTIATION",
   },
   {

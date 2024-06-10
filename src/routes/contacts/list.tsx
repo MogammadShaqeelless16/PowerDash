@@ -166,7 +166,7 @@ export const ContactsListPage: React.FC<Props> = ({ children }) => {
           },
         }}
         title={
-          <ListTitleButton toPath="contacts" buttonText="Add new contact" />
+          <ListTitleButton toPath="contacts" buttonText="Add new student" />
         }
       >
         {screens.xs || view === "card" ? (

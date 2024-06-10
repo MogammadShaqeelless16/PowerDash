@@ -199,7 +199,7 @@ export const ContactShowPage: React.FC = () => {
             }
             itemProps={{
               name: "companyId",
-              label: "Company",
+              label: "University",
             }}
             view={
               <Space>
