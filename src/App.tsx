@@ -25,6 +25,10 @@ import {
   CalendarShowPage,
 } from "./routes/calendar";
 import {
+  GraduatePageWrapper,
+  GraduateShowPage,
+} from "./routes/graduate";
+import {
   StaffPageWrapper,
   StaffShowPage,
 } from "./routes/staff";
@@ -114,6 +118,17 @@ const App: React.FC = () => {
                       <Route path="show/:id" element={<CalendarShowPage />} />
                       <Route path="edit/:id" element={<CalendarEditPage />} />
                       <Route path="create" element={<CalendarCreatePage />} />
+                    </Route>
+                    <Route
+                      path="/graduate"
+                      element={
+                        <GraduatePageWrapper>
+                          <Outlet />
+                        </GraduatePageWrapper>
+                      }
+                    >
+                      <Route index element={null} />
+                      <Route path="show/:id" element={<GraduateShowPage />} />
                     </Route>
                     <Route
                       path="/finance"
