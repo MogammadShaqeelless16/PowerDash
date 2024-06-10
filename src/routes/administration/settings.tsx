@@ -36,7 +36,7 @@ export const SettingsPage = () => {
       >
         <Logo width={96} height={96} />
         <Text style={{ fontSize: "32px", fontWeight: 700 }}>
-          SLIMS
+          SLIMS - Student Leads Information Management System
         </Text>
       </Space>
       <Row
