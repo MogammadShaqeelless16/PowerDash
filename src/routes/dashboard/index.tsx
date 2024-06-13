@@ -1,12 +1,7 @@
 import React from "react";
-
 import { useCustom } from "@refinedev/core";
-
 import { Col, Row } from "antd";
-
-
 import type { DashboardTotalCountsQuery } from "@/graphql/types";
-
 import {
   CompaniesMap,
   DashboardDealsChart,
@@ -16,12 +11,17 @@ import {
 } from "./components";
 import { DASHBOARD_TOTAL_COUNTS_QUERY } from "./queries";
 
-export const DashboardPage: React.FC = () => {
+const DashboardPage: React.FC = () => {
   const { data, isLoading } = useCustom<DashboardTotalCountsQuery>({
     url: "",
     method: "get",
     meta: { gqlQuery: DASHBOARD_TOTAL_COUNTS_QUERY },
   });
+
+  // Ensure data and data.data are properly checked
+  const companiesTotalCount = data?.data?.companies?.totalCount;
+  const contactsTotalCount = data?.data?.contacts?.totalCount;
+  const dealsTotalCount = data?.data?.deals?.totalCount;
 
   return (
     <div className="page-container">
@@ -30,92 +30,53 @@ export const DashboardPage: React.FC = () => {
           <DashboardTotalCountCard
             resource="companies"
             isLoading={isLoading}
-            totalCount={data?.data["companies"].totalCount}
+            totalCount={companiesTotalCount}
           />
         </Col>
         <Col xs={24} sm={24} xl={8}>
           <DashboardTotalCountCard
             resource="contacts"
             isLoading={isLoading}
-            totalCount={data?.data["contacts"].totalCount}
+            totalCount={contactsTotalCount}
           />
         </Col>
         <Col xs={24} sm={24} xl={8}>
           <DashboardTotalCountCard
             resource="deals"
             isLoading={isLoading}
-            totalCount={data?.data["deals"].totalCount}
+            totalCount={dealsTotalCount}
           />
         </Col>
       </Row>
 
-      <Row
-        gutter={[32, 32]}
-        style={{
-          marginTop: "32px",
-        }}
-      >
-        <Col
-          xs={24}
-          sm={24}
-          xl={8}
-          style={{
-            height: "432px",
-          }}
-        >
+      <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
+        <Col xs={24} sm={24} xl={8} style={{ height: "432px" }}>
           <DashboardTotalRevenueChart />
         </Col>
-        <Col
-          xs={24}
-          sm={24}
-          xl={16}
-          style={{
-            height: "432px",
-          }}
-        >
+        <Col xs={24} sm={24} xl={16} style={{ height: "432px" }}>
           <DashboardDealsChart />
         </Col>
       </Row>
 
-      <Row
-        gutter={[32, 32]}
-        style={{
-          marginTop: "32px",
-        }}
-      >
+      <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
         <Col xs={24} sm={24} xl={14} xxl={16}>
+          {/* Add your content here */}
         </Col>
         <Col xs={24} sm={24} xl={10} xxl={8}>
+          {/* Add your content here */}
         </Col>
       </Row>
 
-      <Row
-        gutter={[32, 32]}
-        style={{
-          marginTop: "32px",
-        }}
-      >
-        <Col
-          xs={24}
-          sm={24}
-          xl={8}
-          style={{
-            height: "448px",
-          }}
-        >
+      <Row gutter={[32, 32]} style={{ marginTop: "32px" }}>
+        <Col xs={24} sm={24} xl={8} style={{ height: "448px" }}>
           <DashboardTasksChart />
         </Col>
-        <Col
-          xs={24}
-          sm={24}
-          xl={16}
-          style={{
-            height: "448px",
-          }}
-        >
+        <Col xs={24} sm={24} xl={16} style={{ height: "448px" }}>
           <CompaniesMap />
         </Col>
       </Row>
     </div>
   );
 };
+
+export default DashboardPage;

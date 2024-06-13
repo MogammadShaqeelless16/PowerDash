@@ -1,19 +1,27 @@
-import React, { type FC, type PropsWithChildren, Suspense } from "react";
+import React from "react";
 import { AuditOutlined, BookOutlined, TeamOutlined } from "@ant-design/icons";
 import type { AreaConfig } from "@ant-design/plots";
 import { Card, Skeleton } from "antd";
 import { Text } from "@/components";
+
 import styles from "./index.module.css";
 
 const Area = React.lazy(() => import("@ant-design/plots/es/components/area"));
 
 type Type = "companies" | "contacts" | "deals";
 
-export const DashboardTotalCountCard: React.FC<{
+interface DashboardTotalCountCardProps {
   resource: Type;
   isLoading: boolean;
-}> = ({ resource, isLoading }) => {
-  const { primaryColor, secondaryColor, icon, title, totalCount } = variants[resource];
+  totalCount?: string; // Make totalCount optional
+}
+
+export const DashboardTotalCountCard: React.FC<DashboardTotalCountCardProps> = ({
+  resource,
+  isLoading,
+  totalCount,
+}) => {
+  const { primaryColor, secondaryColor, icon, title } = variants[resource];
 
   const config: AreaConfig = {
     className: styles.area,
@@ -100,18 +108,15 @@ export const DashboardTotalCountCard: React.FC<{
             totalCount
           )}
         </Text>
-        <Suspense>
+        <React.Suspense fallback={<div>Loading...</div>}>
           <Area {...config} />
-        </Suspense>
+        </React.Suspense>
       </div>
     </Card>
   );
 };
 
-const IconWrapper: FC<PropsWithChildren<{ color: string }>> = ({
-  color,
-  children,
-}) => {
+const IconWrapper: React.FC<{ color: string }> = ({ color, children }) => {
   return (
     <div
       style={{
@@ -135,7 +140,6 @@ const variants: {
     secondaryColor?: string;
     icon: React.ReactNode;
     title: string;
-    totalCount: string;
     data: { index: string; value: number }[];
   };
 } = {
@@ -153,7 +157,6 @@ const variants: {
       </IconWrapper>
     ),
     title: "Number of universities",
-    totalCount: "28", // Hardcoded total count for universities
     data: [
       {
         index: "1",
@@ -191,7 +194,6 @@ const variants: {
       </IconWrapper>
     ),
     title: "Number of Students",
-    totalCount: "100+", // Hardcoded total count for students
     data: [
       {
         index: "1",
@@ -233,7 +235,6 @@ const variants: {
       </IconWrapper>
     ),
     title: "Number of Graduates",
-    totalCount: "120+", // Hardcoded total count for deals
     data: [
       {
         index: "1",
@@ -270,3 +271,5 @@ const variants: {
     ],
   },
 };
+
+export default DashboardTotalCountCard;
