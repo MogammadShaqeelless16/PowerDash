@@ -130,7 +130,7 @@ export const DashboardDealsChart: React.FC = () => {
       }
     >
       <Suspense>
-        <Area {...config} height={325} />
+      <iframe title="Sinovuyo graph" width="100%" height="350" src="https://app.powerbi.com/reportEmbed?reportId=2dfefe01-f70b-4801-ac7c-2df37eaf1d0b&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&navContentPaneEnabled=false&chromeless=true" frameBorder="0"></iframe>
       </Suspense>
     </Card>
   );
