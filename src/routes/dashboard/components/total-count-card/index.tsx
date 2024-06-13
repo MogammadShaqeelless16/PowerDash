@@ -232,7 +232,7 @@ const variants: {
         />
       </IconWrapper>
     ),
-    title: "Number of Graduate",
+    title: "Number of Graduates",
     totalCount: "120+", // Hardcoded total count for deals
     data: [
       {
