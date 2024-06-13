@@ -1,11 +1,8 @@
 import React, { type FC, type PropsWithChildren, Suspense } from "react";
-
-import { AuditOutlined, BookOutlined , TeamOutlined } from "@ant-design/icons";
+import { AuditOutlined, BookOutlined, TeamOutlined } from "@ant-design/icons";
 import type { AreaConfig } from "@ant-design/plots";
 import { Card, Skeleton } from "antd";
-
 import { Text } from "@/components";
-
 import styles from "./index.module.css";
 
 const Area = React.lazy(() => import("@ant-design/plots/es/components/area"));
@@ -15,9 +12,8 @@ type Type = "companies" | "contacts" | "deals";
 export const DashboardTotalCountCard: React.FC<{
   resource: Type;
   isLoading: boolean;
-  totalCount?: number;
-}> = ({ resource, isLoading, totalCount }) => {
-  const { primaryColor, secondaryColor, icon, title } = variants[resource];
+}> = ({ resource, isLoading }) => {
+  const { primaryColor, secondaryColor, icon, title, totalCount } = variants[resource];
 
   const config: AreaConfig = {
     className: styles.area,
@@ -89,7 +85,7 @@ export const DashboardTotalCountCard: React.FC<{
           strong
           style={{
             textAlign: "start",
-            marginLeft: "48px",
+            marginLeft: "30px",
             fontVariantNumeric: "tabular-nums",
           }}
         >
@@ -139,6 +135,7 @@ const variants: {
     secondaryColor?: string;
     icon: React.ReactNode;
     title: string;
+    totalCount: string;
     data: { index: string; value: number }[];
   };
 } = {
@@ -147,8 +144,7 @@ const variants: {
     secondaryColor: "#BAE0FF",
     icon: (
       <IconWrapper color="#E6F4FF">
-        {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
-        <BookOutlined 
+        <BookOutlined
           className="md"
           style={{
             color: "#1677FF",
@@ -157,6 +153,7 @@ const variants: {
       </IconWrapper>
     ),
     title: "Number of universities",
+    totalCount: "28", // Hardcoded total count for universities
     data: [
       {
         index: "1",
@@ -185,7 +182,6 @@ const variants: {
     secondaryColor: "#D9F7BE",
     icon: (
       <IconWrapper color="#F6FFED">
-        {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
         <TeamOutlined
           className="md"
           style={{
@@ -194,7 +190,8 @@ const variants: {
         />
       </IconWrapper>
     ),
-    title: "Number of students",
+    title: "Number of Students",
+    totalCount: "100+", // Hardcoded total count for students
     data: [
       {
         index: "1",
@@ -227,7 +224,6 @@ const variants: {
     secondaryColor: "#FFD8BF",
     icon: (
       <IconWrapper color="#FFF2E8">
-        {/* @ts-expect-error Ant Design Icon's v5.0.1 has an issue with @types/react@^18.2.66 */}
         <AuditOutlined
           className="md"
           style={{
@@ -236,7 +232,8 @@ const variants: {
         />
       </IconWrapper>
     ),
-    title: "Total deals in pipeline",
+    title: "Number of Graduate",
+    totalCount: "120+", // Hardcoded total count for deals
     data: [
       {
         index: "1",
