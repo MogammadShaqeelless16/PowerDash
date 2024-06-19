@@ -146,16 +146,7 @@ const variants: {
   companies: {
     primaryColor: "#1677FF",
     secondaryColor: "#BAE0FF",
-    icon: (
-      <IconWrapper color="#E6F4FF">
-        <BookOutlined
-          className="md"
-          style={{
-            color: "#1677FF",
-          } as any}
-        />
-      </IconWrapper>
-    ),
+    icon: <BookOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of universities",
     data: [
       {
@@ -183,16 +174,7 @@ const variants: {
   contacts: {
     primaryColor: "#52C41A",
     secondaryColor: "#D9F7BE",
-    icon: (
-      <IconWrapper color="#F6FFED">
-        <TeamOutlined
-          className="md"
-          style={{
-            color: "#52C41A",
-          } as any}
-        />
-      </IconWrapper>
-    ),
+    icon: <TeamOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of Students",
     data: [
       {
@@ -224,16 +206,7 @@ const variants: {
   deals: {
     primaryColor: "#FA541C",
     secondaryColor: "#FFD8BF",
-    icon: (
-      <IconWrapper color="#FFF2E8">
-        <AuditOutlined
-          className="md"
-          style={{
-            color: "#FA541C",
-          } as any}
-        />
-      </IconWrapper>
-    ),
+    icon: <AuditOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of Graduates",
     data: [
       {
