@@ -46,7 +46,7 @@ import {
   ContactShowPage,
   ContactsListPage,
 } from "./routes/contacts";
-import { DashboardPage } from "./routes/dashboard";
+import DashboardPage from "./routes/dashboard";
 import { ForgotPasswordPage } from "./routes/forgot-password";
 import { LoginPage } from "./routes/login";
 import {
