@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { AuditOutlined, BookOutlined, TeamOutlined } from "@ant-design/icons";
 import type { AreaConfig } from "@ant-design/plots";
 import { Card, Skeleton } from "antd";
 import { Text } from "@/components";
-
 import styles from "./index.module.css";
 
 const Area = React.lazy(() => import("@ant-design/plots/es/components/area"));
@@ -21,7 +20,7 @@ export const DashboardTotalCountCard: React.FC<DashboardTotalCountCardProps> = (
   isLoading,
   totalCount,
 }) => {
-  const { primaryColor, secondaryColor, icon, title } = variants[resource];
+  const { primaryColor, secondaryColor, icon, title, hardcodedTotalCount } = variants[resource];
 
   const config: AreaConfig = {
     className: styles.area,
@@ -105,34 +104,17 @@ export const DashboardTotalCountCard: React.FC<DashboardTotalCountCardProps> = (
               }}
             />
           ) : (
-            totalCount
+            totalCount || hardcodedTotalCount
           )}
         </Text>
-        <React.Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
           <Area {...config} />
-        </React.Suspense>
+        </Suspense>
       </div>
     </Card>
   );
 };
 
-const IconWrapper: React.FC<{ color: string; children: React.ReactNode }> = ({ color, children }) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "32px",
-        height: "32px",
-        borderRadius: "50%",
-        backgroundColor: color,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
 
 const variants: {
   [key in Type]: {
@@ -140,14 +122,16 @@ const variants: {
     secondaryColor?: string;
     icon: React.ReactNode;
     title: string;
+    hardcodedTotalCount: string;
     data: { index: string; value: number }[];
   };
 } = {
   companies: {
     primaryColor: "#1677FF",
     secondaryColor: "#BAE0FF",
-    icon: <BookOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
+    icon: <AuditOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of universities",
+    hardcodedTotalCount: "28", // Hardcoded total count for universities
     data: [
       {
         index: "1",
@@ -174,8 +158,9 @@ const variants: {
   contacts: {
     primaryColor: "#52C41A",
     secondaryColor: "#D9F7BE",
-    icon: <TeamOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
+    icon: <AuditOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of Students",
+    hardcodedTotalCount: "100+", // Hardcoded total count for students
     data: [
       {
         index: "1",
@@ -208,6 +193,7 @@ const variants: {
     secondaryColor: "#FFD8BF",
     icon: <AuditOutlined className="md" onPointerEnterCapture={{}} onPointerLeaveCapture={{}} />,
     title: "Number of Graduates",
+    hardcodedTotalCount: "120+", // Hardcoded total count for deals
     data: [
       {
         index: "1",
