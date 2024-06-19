@@ -19,9 +19,9 @@ const DashboardPage: React.FC = () => {
   });
 
   // Ensure data and data.data are properly checked
-  const companiesTotalCount = data?.data?.companies?.totalCount;
-  const contactsTotalCount = data?.data?.contacts?.totalCount;
-  const dealsTotalCount = data?.data?.deals?.totalCount;
+  const companiesTotalCount = data?.data?.companies?.totalCount?.toString();
+  const contactsTotalCount = data?.data?.contacts?.totalCount?.toString();
+  const dealsTotalCount = data?.data?.deals?.totalCount?.toString();
 
   return (
     <div className="page-container">

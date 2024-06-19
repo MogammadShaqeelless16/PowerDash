@@ -116,7 +116,7 @@ export const DashboardTotalCountCard: React.FC<DashboardTotalCountCardProps> = (
   );
 };
 
-const IconWrapper: React.FC<{ color: string }> = ({ color, children }) => {
+const IconWrapper: React.FC<{ color: string; children: React.ReactNode }> = ({ color, children }) => {
   return (
     <div
       style={{
@@ -152,7 +152,7 @@ const variants: {
           className="md"
           style={{
             color: "#1677FF",
-          }}
+          } as any}
         />
       </IconWrapper>
     ),
@@ -189,7 +189,7 @@ const variants: {
           className="md"
           style={{
             color: "#52C41A",
-          }}
+          } as any}
         />
       </IconWrapper>
     ),
@@ -230,7 +230,7 @@ const variants: {
           className="md"
           style={{
             color: "#FA541C",
-          }}
+          } as any}
         />
       </IconWrapper>
     ),
