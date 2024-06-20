@@ -19,9 +19,9 @@ const DashboardPage: React.FC = () => {
   });
 
   // Ensure data and data.data are properly checked
-  const companiesTotalCount = "28"; // Default hardcoded value for companies
-  const contactsTotalCount = "100+"; // Default hardcoded value for contacts
-  const dealsTotalCount = "120+"; // Default hardcoded value for deals
+  const companiesTotalCount = "26"; // Default hardcoded value for companies
+  const contactsTotalCount = "100k+"; // Default hardcoded value for contacts
+  const dealsTotalCount = "800K+"; // Default hardcoded value for deals
 
   return (
     <div className="page-container">
