@@ -13,7 +13,7 @@ export const GraduatePageWrapper: React.FC<React.PropsWithChildren> = ({
   return (
     <div className="page-container">
       {children}
-      <iframe title="Graduates2" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=37253408-fcb8-4b5f-8b4a-b5d14b93672e&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716&navContentPaneEnabled=false&filterPaneEnabled=false" frameBorder="0"></iframe>
+     <iframe title="graduates_final_finale" width="100%" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=d6c4ce29-4544-4605-94e8-c0b6bff08f73&autoAuth=true&ctid=a3f14f21-237f-4028-b978-425eb768a716" frameBorder="0"></iframe>
     </div>
   );
 };
